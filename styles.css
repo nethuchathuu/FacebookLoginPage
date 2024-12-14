@@ -1,0 +1,250 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color:  #a0abff; /* Light Beige background for a nostalgic, vintage feel */
+    color: #000; /* Dark text for contrast */
+    font-family: 'Press Start 2P', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+/* Main container with two sides */
+.container {
+    display: flex;
+    width: 80%; /* Reduced width to avoid being too large */
+    height: 80%; /* Reduced height to avoid being too large */
+    max-width: 1000px; /* Max width to avoid stretching too much */
+    margin: auto; /* Centering container horizontally */
+    border: 8px solid #000; /* Border for container */
+    background-color: #2e2e2e; /* Background color for both sections */
+}
+
+
+
+/* Left side (Facebook icon and title) */
+.left-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-color: #FFDF7F ; /* Darker background to balance with the right side */
+    border-right: 8px solid #000; /* Border to separate from right side */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6); /* Shadow for depth */
+}
+
+/* Logo Styling */
+.left-side .logo img {
+    width: 120px; /* Larger size for better visibility */
+    height: 120px;
+    image-rendering: pixelated; /* Ensure pixel sharpness */
+    margin-bottom: 20px;
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+/* Hover effect on logo */
+.left-side .logo img:hover {
+    transform: scale(1.1); /* Slight zoom on hover for interactivity */
+}
+
+/* Pixel Text (Title) */
+.left-side .pixel-text {
+    font-size: 40px;
+    letter-spacing: 4px;
+    color: #2A9D8F; /* Facebook Blue */
+    text-shadow: 4px 4px #000, 0 0 10px #2A9D8F; /* Strong shadow for emphasis */
+    margin-bottom: 15px;
+    text-transform: uppercase; /* Make title bold and impactful */
+    animation: textGlow 1.5s infinite alternate; /* Glowing text effect */
+}
+
+@keyframes textGlow {
+    0% {
+        text-shadow: 4px 4px 10px #4d8ef7, 0 0 20px #4d8ef7;
+    }
+    100% {
+        text-shadow: 4px 4px 30px #4d8ef7, 0 0 40px #4d8ef7;
+    }
+}
+
+/* Tagline styling */
+.left-side .tagline {
+    font-size: 20px;
+    color: #4B5320; /* Soft gray for contrast */
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px #000; /* Light shadow to make the text pop */
+    opacity: 0.85; /* Slight transparency for a vintage look */
+    margin-top: 10px;
+}
+
+/* Right side (Login and registration form) */
+.right-side {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #FFDF7F; /* Darker background to differentiate from left side */
+    border-left: 8px solid #000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for the right section */
+}
+
+/* Retro Container for the login form */
+.retro-container {
+    background-color: #F4A261 ;
+    border: 8px solid #000;
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 10px 10px 0px #000; /* Pixel Shadow Effect */
+    position: relative;
+    border-radius: 8px; /* Soft rounded corners for a smoother look */
+}
+
+/* Styling for inputs and buttons */
+.pixel-input {
+    background-color: #000;
+    color: #fff;
+    border: 4px solid #4d8ef7;
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 10px;
+    padding: 12px;
+    margin-bottom: 15px;
+    width: 100%;
+    text-shadow: 1px 1px #000;
+    box-shadow: 4px 4px #000;
+    border-radius: 4px; /* Rounded corners for input fields */
+}
+
+/* Button styling */
+.pixel-button {
+    background-color: #4d8ef7;
+    color: #fff;
+    border: 4px solid #000;
+    padding: 12px;
+    cursor: pointer;
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 12px;
+    box-shadow: 4px 4px #000;
+    text-shadow: 1px 1px #000;
+    text-transform: uppercase;
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 4px; /* Rounded corners for buttons */
+}
+
+/* Button hover effect */
+.pixel-button:hover {
+    background-color: #2e73e5;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5); /* Enhance hover with shadow */
+}
+
+/* Forgot password link styling */
+.forgot-link {
+    color: #8ab4f7;
+    font-size: 10px;
+    text-decoration: none;
+    text-shadow: 1px 1px #000;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.forgot-link:hover {
+    text-decoration: underline;
+}
+
+/* Signup button styling */
+.signup {
+    background-color: #f24d57;
+    margin-top: 10px;
+}
+
+.signup:hover {
+    background-color: #f27a7f;
+}
+
+/* Footer text */
+.footer-text {
+    font-size: 10px;
+    margin-top: 20px;
+    color: #aaa;
+    text-shadow: 1px 1px #000;
+    text-align: center;
+}
+
+/* Floating Icons Background */
+.icon-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.icon {
+    position: absolute;
+    font-size: 30px;
+    animation: floatIcon 10s linear infinite;
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+/* Icon animation */
+@keyframes floatIcon {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+        opacity: 0.6;
+    }
+    50% {
+        transform: translate(100px, -100px) rotate(180deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-100px, 100px) rotate(360deg);
+        opacity: 0.6;
+    }
+}
+
+@keyframes formEntry {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.retro-container {
+    animation: formEntry 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.left-side {
+    animation: fadeIn 0.6s ease-out;
+}
